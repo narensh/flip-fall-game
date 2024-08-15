@@ -1,4 +1,6 @@
-﻿Shader "Custom/Stencil/Self-Illumin-Diffuse Mask OneZLess"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Custom/Stencil/Self-Illumin-Diffuse Mask OneZLess"
 {
 	Properties{
 		_Color("Main Color", Color) = (1,1,1,1)
@@ -39,7 +41,7 @@
             v2f vert(appdata v)
             {
                 v2f o;
-                o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+                o.pos = UnityObjectToClipPos(v.vertex);
                 return o;
             }
             half4 frag(v2f i) : COLOR

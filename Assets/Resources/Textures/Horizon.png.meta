@@ -1,36 +1,93 @@
 fileFormatVersion: 2
 guid: 6f3140944b3852c439f30a650d15cb6b
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Horizon_0
-    21300002: Horizon_1
-    21300004: Horizon_2
-    21300006: Horizon_3
-    21300008: Horizon_4
-    21300010: Horizon_5
-    21300012: Horizon_6
-    21300014: Horizon_7
-    21300016: Horizon_8
-    21300018: Horizon_9
-    21300020: Horizon_10
-    21300022: Horizon_11
-    21300024: Horizon_12
-    21300026: Horizon_13
-    21300028: Horizon_14
-    21300030: Horizon_15
-    21300032: Horizon_16
-    21300034: Horizon_17
-    21300036: Horizon_18
-    21300038: Horizon_19
-    21300040: Horizon_20
-    21300042: Horizon_21
-    21300044: Horizon_22
-    21300046: Horizon_23
-    21300048: Horizon_24
-    21300050: Horizon_25
-    21300052: Horizon_26
-    21300054: Horizon_27
-  serializedVersion: 4
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Horizon_0
+  - first:
+      213: 21300002
+    second: Horizon_1
+  - first:
+      213: 21300004
+    second: Horizon_2
+  - first:
+      213: 21300006
+    second: Horizon_3
+  - first:
+      213: 21300008
+    second: Horizon_4
+  - first:
+      213: 21300010
+    second: Horizon_5
+  - first:
+      213: 21300012
+    second: Horizon_6
+  - first:
+      213: 21300014
+    second: Horizon_7
+  - first:
+      213: 21300016
+    second: Horizon_8
+  - first:
+      213: 21300018
+    second: Horizon_9
+  - first:
+      213: 21300020
+    second: Horizon_10
+  - first:
+      213: 21300022
+    second: Horizon_11
+  - first:
+      213: 21300024
+    second: Horizon_12
+  - first:
+      213: 21300026
+    second: Horizon_13
+  - first:
+      213: 21300028
+    second: Horizon_14
+  - first:
+      213: 21300030
+    second: Horizon_15
+  - first:
+      213: 21300032
+    second: Horizon_16
+  - first:
+      213: 21300034
+    second: Horizon_17
+  - first:
+      213: 21300036
+    second: Horizon_18
+  - first:
+      213: 21300038
+    second: Horizon_19
+  - first:
+      213: 21300040
+    second: Horizon_20
+  - first:
+      213: 21300042
+    second: Horizon_21
+  - first:
+      213: 21300044
+    second: Horizon_22
+  - first:
+      213: 21300046
+    second: Horizon_23
+  - first:
+      213: 21300048
+    second: Horizon_24
+  - first:
+      213: 21300050
+    second: Horizon_25
+  - first:
+      213: 21300052
+    second: Horizon_26
+  - first:
+      213: 21300054
+    second: Horizon_27
+  externalObjects: {}
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -38,6 +95,8 @@ TextureImporter:
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -45,18 +104,26 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
   textureFormat: -3
   maxTextureSize: 1024
   textureSettings:
+    serializedVersion: 2
     filterMode: 0
     aniso: 16
-    mipBias: -1
-    wrapMode: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -65,41 +132,64 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
-  - buildTarget: DefaultTexturePlatform
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 1024
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Standalone
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 4
+    buildTarget: Standalone
     maxTextureSize: 1024
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-  - buildTarget: Android
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 4
+    buildTarget: Android
     maxTextureSize: 1024
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -114,8 +204,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_1
       rect:
@@ -127,8 +226,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_2
       rect:
@@ -140,8 +248,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_3
       rect:
@@ -153,8 +270,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_4
       rect:
@@ -166,8 +292,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_5
       rect:
@@ -179,8 +314,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_6
       rect:
@@ -192,8 +336,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_7
       rect:
@@ -205,8 +358,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_8
       rect:
@@ -218,8 +380,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_9
       rect:
@@ -231,8 +402,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_10
       rect:
@@ -244,8 +424,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_11
       rect:
@@ -257,8 +446,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_12
       rect:
@@ -270,8 +468,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_13
       rect:
@@ -283,8 +490,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_14
       rect:
@@ -296,8 +512,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_15
       rect:
@@ -309,8 +534,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_16
       rect:
@@ -322,8 +556,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_17
       rect:
@@ -335,8 +578,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_18
       rect:
@@ -348,8 +600,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_19
       rect:
@@ -361,8 +622,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_20
       rect:
@@ -374,8 +644,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_21
       rect:
@@ -387,8 +666,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_22
       rect:
@@ -400,8 +688,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_23
       rect:
@@ -413,8 +710,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_24
       rect:
@@ -426,8 +732,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_25
       rect:
@@ -439,8 +754,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_26
       rect:
@@ -452,8 +776,17 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     - serializedVersion: 2
       name: Horizon_27
       rect:
@@ -465,10 +798,61 @@ TextureImporter:
       alignment: 2
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
+      physicsShape: []
       tessellationDetail: -1
+      bones: []
+      spriteID: 
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
-  spritePackingTag: 
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Horizon_0: 21300000
+      Horizon_1: 21300002
+      Horizon_10: 21300020
+      Horizon_11: 21300022
+      Horizon_12: 21300024
+      Horizon_13: 21300026
+      Horizon_14: 21300028
+      Horizon_15: 21300030
+      Horizon_16: 21300032
+      Horizon_17: 21300034
+      Horizon_18: 21300036
+      Horizon_19: 21300038
+      Horizon_2: 21300004
+      Horizon_20: 21300040
+      Horizon_21: 21300042
+      Horizon_22: 21300044
+      Horizon_23: 21300046
+      Horizon_24: 21300048
+      Horizon_25: 21300050
+      Horizon_26: 21300052
+      Horizon_27: 21300054
+      Horizon_3: 21300006
+      Horizon_4: 21300008
+      Horizon_5: 21300010
+      Horizon_6: 21300012
+      Horizon_7: 21300014
+      Horizon_8: 21300016
+      Horizon_9: 21300018
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

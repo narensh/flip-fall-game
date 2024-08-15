@@ -255,7 +255,7 @@ namespace FlipFall.UI
         public void OpenLeaderboard()
         {
             Debug.Log("Open Leaderboard " + activeUILevel);
-            PlayGamesPlatform.Instance.ShowLeaderboardUI(leaderboards[activeUILevel]);
+            // PlayGamesPlatform.Instance.ShowLeaderboardUI(leaderboards[activeUILevel]);
         }
 
         public static UILevel GetUILevel(int id)

@@ -87,7 +87,7 @@ namespace FlipFall.Cam
                 Quaternion memoryRotation;
 
                 // movement to the right
-                if (Player._instance.rBody.velocity.x > 0)
+                if (Player._instance.rBody.linearVelocity.x > 0)
                 {
                     if (_instance.maxRotation != Quaternion.AngleAxis(_instance.maxRotationAngle, Vector3.forward))
                     {
@@ -202,7 +202,7 @@ namespace FlipFall.Cam
             while (t < 1F)
             {
                 t += Time.deltaTime * (Time.timeScale / duration);
-                velocity = rb.velocity;
+                velocity = rb.linearVelocity;
 
                 if (rotationType == RotationType.defaultToMax)
                     currentVelocityRotation = Quaternion.Lerp(defaultRotation, maxRotation, Mathf.SmoothStep(0, 1, Mathf.InverseLerp(0, maxVelocity, Mathf.Abs(velocity.x))));
@@ -239,7 +239,7 @@ namespace FlipFall.Cam
 
             while (true)
             {
-                velocity = rb.velocity;
+                velocity = rb.linearVelocity;
                 //velocity.x = System.Math.Abs(velocity.x);
 
                 if (velocity.x > maxVelocity)
@@ -282,7 +282,7 @@ namespace FlipFall.Cam
 
             while (true)
             {
-                velocity = rb.velocity;
+                velocity = rb.linearVelocity;
                 //velocity.x = System.Math.Abs(velocity.x);
 
                 if (velocity.x > (maxVelocity - Constants.velocityThreshhold))

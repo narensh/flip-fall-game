@@ -61,7 +61,7 @@ namespace FlipFall.Cam
             switch (playerAction)
             {
                 case Player.PlayerAction.reflect:
-                    if (player.rBody.velocity.x != 0)
+                    if (player.rBody.linearVelocity.x != 0)
                         CamRotation.ReflectRotationSwitch(player, reflectRotationSwitchDuration);
                     break;
 

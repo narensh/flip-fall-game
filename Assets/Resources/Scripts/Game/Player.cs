@@ -244,9 +244,9 @@ namespace FlipFall
 
             rBody.gravityScale = gravity;
             if (spawn.facingLeftOnSpawn)
-                rBody.velocity = new Vector3(-0.00001f, 0f, 0f);
+                rBody.linearVelocity = new Vector3(-0.00001f, 0f, 0f);
             else
-                rBody.velocity = new Vector3(0.00001f, 0f, 0f);
+                rBody.linearVelocity = new Vector3(0.00001f, 0f, 0f);
             rBody.WakeUp();
         }
 
@@ -255,9 +255,9 @@ namespace FlipFall
             Debug.Log("DEATHPOS: " + pos + " playerpos " + transform.position + " deathpos " + deathPos);
 
             // Death is my Hobby
-            PlayGamesPlatform.Instance.IncrementAchievement("CgkIqIqqjZYFEAIQCg", 1, (bool success) =>
-            {
-            });
+            // PlayGamesPlatform.Instance.IncrementAchievement("CgkIqIqqjZYFEAIQCg", 1, (bool success) =>
+            // {
+            // });
 
             SetPlayerState(PlayerState.dead);
             charging = false;
@@ -286,7 +286,7 @@ namespace FlipFall
             deathParticlesEmit.enabled = true;
             deathParticles.Play();
 
-            rBody.velocity = Vector3.zero;
+            rBody.linearVelocity = Vector3.zero;
             rBody.gravityScale = 0f;
             rBody.Sleep();
 
@@ -297,9 +297,9 @@ namespace FlipFall
         {
             SetPlayerState(PlayerState.win);
 
-            PlayGamesPlatform.Instance.IncrementAchievement("CgkIqIqqjZYFEAIQFQ", 1, (bool success) =>
-            {
-            });
+            // PlayGamesPlatform.Instance.IncrementAchievement("CgkIqIqqjZYFEAIQFQ", 1, (bool success) =>
+            // {
+            // });
 
             // start level dissolve effect
             LevelPlacer.generatedLevel.moveArea.DissolveLevel();
@@ -322,7 +322,7 @@ namespace FlipFall
             //disables player mesh, only leaving particle effectss
             GetComponent<MeshRenderer>().enabled = false;
 
-            rBody.velocity = Vector3.zero;
+            rBody.linearVelocity = Vector3.zero;
             rBody.gravityScale = 0f;
             rBody.Sleep();
         }
@@ -336,7 +336,7 @@ namespace FlipFall
             deathParticlesEmit.enabled = false;
             deathParticles.Stop();
             gameObject.GetComponent<MeshRenderer>().material = defaultMaterial;
-            rBody.velocity = Vector3.zero;
+            rBody.linearVelocity = Vector3.zero;
             rBody.gravityScale = 0f;
             rBody.Sleep();
         }
@@ -355,42 +355,42 @@ namespace FlipFall
             if (!newMovement)
             {
                 // currently moving to the right => switch to the left
-                if (rBody.velocity.x > 0)
-                    rBody.velocity = new Vector2(-directionSwitchForce, rBody.velocity.y);
+                if (rBody.linearVelocity.x > 0)
+                    rBody.linearVelocity = new Vector2(-directionSwitchForce, rBody.linearVelocity.y);
                 // currently moving to the left => switch to the right
                 else
-                    rBody.velocity = new Vector2(directionSwitchForce, rBody.velocity.y);
+                    rBody.linearVelocity = new Vector2(directionSwitchForce, rBody.linearVelocity.y);
             }
             // keep the force and just flip it when its bigger than the default value
             else
             {
                 // currently moving to the right => switch to the left
-                if (rBody.velocity.x > 0)
-                    if (rBody.velocity.x > directionSwitchForce)
-                        rBody.velocity = new Vector2(-rBody.velocity.x, rBody.velocity.y);
+                if (rBody.linearVelocity.x > 0)
+                    if (rBody.linearVelocity.x > directionSwitchForce)
+                        rBody.linearVelocity = new Vector2(-rBody.linearVelocity.x, rBody.linearVelocity.y);
                     else
-                        rBody.velocity = new Vector2(-directionSwitchForce, rBody.velocity.y);
+                        rBody.linearVelocity = new Vector2(-directionSwitchForce, rBody.linearVelocity.y);
                 // currently moving to the left => switch to the right
                 else {
-                    if (rBody.velocity.x < -directionSwitchForce)
-                        rBody.velocity = new Vector2(-rBody.velocity.x, rBody.velocity.y);
+                    if (rBody.linearVelocity.x < -directionSwitchForce)
+                        rBody.linearVelocity = new Vector2(-rBody.linearVelocity.x, rBody.linearVelocity.y);
                     else
-                        rBody.velocity = new Vector2(directionSwitchForce, rBody.velocity.y);
+                        rBody.linearVelocity = new Vector2(directionSwitchForce, rBody.linearVelocity.y);
                 }
             }
 
             SwitchFacingDirection();
             onPlayerAction.Invoke(PlayerAction.reflect);
 
-            PlayGamesPlatform.Instance.IncrementAchievement("CgkIqIqqjZYFEAIQFA", 1, (bool success) =>
-            {
-            });
+            // PlayGamesPlatform.Instance.IncrementAchievement("CgkIqIqqjZYFEAIQFA", 1, (bool success) =>
+            // {
+            // });
         }
 
         // reflect the player to the right when he flies to the left
         public void ReflectToLeft()
         {
-            if (rBody.velocity.x > 0)
+            if (rBody.linearVelocity.x > 0)
             {
                 Reflect();
             }
@@ -404,7 +404,7 @@ namespace FlipFall
         // reflect the player to the left when he flies to the right
         public void ReflectToRight()
         {
-            if (rBody.velocity.x < 0)
+            if (rBody.linearVelocity.x < 0)
             {
                 Reflect();
             }
@@ -420,7 +420,7 @@ namespace FlipFall
         {
             charging = true;
             rBody.gravityScale = 0F;
-            rBody.velocity = new Vector2(rBody.velocity.x, 0);
+            rBody.linearVelocity = new Vector2(rBody.linearVelocity.x, 0);
             onPlayerAction.Invoke(PlayerAction.charge);
             yield return new WaitForSeconds(chargeDelayAfterClik);
             yield break;
@@ -461,12 +461,12 @@ namespace FlipFall
         {
             if (IsAlive())
             {
-                Vector2 velocity = rBody.velocity;
+                Vector2 velocity = rBody.linearVelocity;
                 float angle = Mathf.Atan2(velocity.y, velocity.x) * Mathf.Rad2Deg;
                 Quaternion quad = Quaternion.AngleAxis(angle, Vector3.forward);
                 transform.rotation = quad;
 
-                if (charging && Mathf.Abs(rBody.velocity.x) < maxChargeVelocity)
+                if (charging && Mathf.Abs(rBody.linearVelocity.x) < maxChargeVelocity)
                 {
                     if (velocity.x < 0)
                     {
@@ -476,7 +476,7 @@ namespace FlipFall
                     {
                         velocity.x = velocity.x + chargeForcePerTick;
                     }
-                    rBody.velocity = velocity;
+                    rBody.linearVelocity = velocity;
                 }
 
                 if (!IsOnMoveArea())

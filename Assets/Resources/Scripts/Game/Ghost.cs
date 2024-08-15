@@ -78,7 +78,7 @@ namespace FlipFall
             trail2.enabled = true;
 
             rBody.gravityScale = Player._instance.gravity;
-            rBody.velocity = new Vector3(0f, -0.00001f, 0f);
+            rBody.linearVelocity = new Vector3(0f, -0.00001f, 0f);
             rBody.WakeUp();
         }
 
@@ -94,7 +94,7 @@ namespace FlipFall
             trail.enabled = false;
             trail2.time = 0.0f;
             trail2.enabled = false;
-            rBody.velocity = Vector3.zero;
+            rBody.linearVelocity = Vector3.zero;
             rBody.gravityScale = 0f;
             rBody.Sleep();
         }
@@ -111,7 +111,7 @@ namespace FlipFall
             trail.enabled = false;
             trail2.time = 0.0f;
             trail2.enabled = false;
-            rBody.velocity = Vector3.zero;
+            rBody.linearVelocity = Vector3.zero;
             rBody.gravityScale = 0f;
             rBody.Sleep();
         }
@@ -120,7 +120,7 @@ namespace FlipFall
         {
             transform.position = spawnPosition;
             gameObject.GetComponent<MeshRenderer>().material = defaultGhostMaterial;
-            rBody.velocity = Vector3.zero;
+            rBody.linearVelocity = Vector3.zero;
             rBody.gravityScale = 0f;
             rBody.Sleep();
         }
@@ -128,7 +128,7 @@ namespace FlipFall
         //X-Achsen-Spiegelung der Figurenflugbahn
         private void Reflect()
         {
-            rBody.velocity = new Vector2(rBody.velocity.x * (-1), rBody.velocity.y);
+            rBody.linearVelocity = new Vector2(rBody.linearVelocity.x * (-1), rBody.linearVelocity.y);
             SwitchFacingDirection();
         }
 
@@ -136,7 +136,7 @@ namespace FlipFall
         private void Charge()
         {
             rBody.gravityScale = 0f;
-            rBody.velocity = new Vector2(rBody.velocity.x, 0f);
+            rBody.linearVelocity = new Vector2(rBody.linearVelocity.x, 0f);
             charging = true;
         }
 
@@ -152,12 +152,12 @@ namespace FlipFall
         {
             if (IsAlive())
             {
-                Vector2 velocity = rBody.velocity;
+                Vector2 velocity = rBody.linearVelocity;
                 //float angle = Mathf.Atan2(velocity.y, velocity.x) * Mathf.Rad2Deg;
                 //Quaternion quad = Quaternion.AngleAxis(angle, Vector3.forward);
                 //transform.rotation = quad;
 
-                if (charging && Mathf.Abs(rBody.velocity.x) < Player._instance.maxChargeVelocity)
+                if (charging && Mathf.Abs(rBody.linearVelocity.x) < Player._instance.maxChargeVelocity)
                 {
                     if (facingLeft)
                     {
@@ -167,7 +167,7 @@ namespace FlipFall
                     {
                         velocity.x = velocity.x + Player._instance.chargeForcePerTick;
                     }
-                    rBody.velocity = velocity;
+                    rBody.linearVelocity = velocity;
                 }
             }
         }

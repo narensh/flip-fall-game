@@ -1,4 +1,4 @@
-﻿using admob;
+﻿// using admob;
 using FlipFall.Progress;
 using FlipFall.UI;
 using GooglePlayGames;
@@ -53,17 +53,19 @@ namespace FlipFall
             if (!started)
             {
                 // Activate the Google Play Games platform
-                PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().EnableSavedGames().Build();
+                // PlayGamesClientConfiguration config = new PlayGamesClientConfiguration.Builder().EnableSavedGames().Build();
+                // PlayGamesPlatform.Instance.Authenticate();
+                // PlayGamesPlatform.Instance.requestServerSideAccess();
 
-                PlayGamesPlatform.InitializeInstance(config);
-                PlayGamesPlatform.DebugLogEnabled = true;
-                PlayGamesPlatform.Activate();
+                // PlayGamesPlatform.InitializeInstance(config);
+                // PlayGamesPlatform.DebugLogEnabled = true;
+                // PlayGamesPlatform.Activate();
 
                 // initialize progress (replace by google save)
                 ProgressManager.LoadProgressData();
 
                 // Initialize Ads
-                Admob.Instance().initAdmob("ca-app-pub-2906510767249222/2074269594", "ca-app-pub-2906510767249222/2353471190");//admob id with format ca-app-pub-279xxxxxxxx/xxxxxxxx
+                // Admob.Instance().initAdmob("ca-app-pub-2906510767249222/2074269594", "ca-app-pub-2906510767249222/2353471190");//admob id with format ca-app-pub-279xxxxxxxx/xxxxxxxx
                 //Admob.Instance().setTesting(true);
 
                 currentScene = ActiveScene.home;
@@ -306,7 +308,7 @@ namespace FlipFall
         private void OnApplicationQuit()
         {
             ProgressManager.SaveProgressData();
-            PlayGamesPlatform.Instance.SignOut();
+            // PlayGamesPlatform.Instance.SignOut();
         }
 
         // Listening for Android-back-key presses
@@ -340,7 +342,7 @@ namespace FlipFall
         public static bool ShowRewardedVideo()
         {
             ShowOptions options = new ShowOptions();
-            options.resultCallback = HandleShowResult;
+            // options.resultCallback = HandleShowResult;
             Advertisement.Show(zoneId, options);
             return true;
         }
@@ -352,7 +354,7 @@ namespace FlipFall
         {
             if (!ProgressManager.GetProgress().proVersion)
             {
-                Admob.Instance().loadInterstitial();
+                // Admob.Instance().loadInterstitial();
             }
         }
 
@@ -361,22 +363,22 @@ namespace FlipFall
             if (!ProgressManager.GetProgress().proVersion)
             {
                 Debug.Log("SHOWINTERSTITIAL");
-                if (Admob.Instance().isInterstitialReady())
-                {
-                    Admob.Instance().showInterstitial();
-                    return true;
-                }
-                else
-                {
-                    RequestInterstitial();
-                    if (Admob.Instance().isInterstitialReady())
-                    {
-                        Admob.Instance().showInterstitial();
-                        return true;
-                    }
-                }
+                // if (Admob.Instance().isInterstitialReady())
+                // {
+                //     Admob.Instance().showInterstitial();
+                //     return true;
+                // }
+                // else
+                // {
+                //     RequestInterstitial();
+                //     if (Admob.Instance().isInterstitialReady())
+                //     {
+                //         Admob.Instance().showInterstitial();
+                //         return true;
+                //     }
+                // }
             }
-            return false;
+            return true;
         }
 
         private static void HandleShowResult(ShowResult result)
@@ -387,9 +389,9 @@ namespace FlipFall
                     Debug.Log("Video completed. User rewarded some credits.");
                     ProgressManager.GetProgress().starsOwned += 1;
                     // Video Junkie
-                    PlayGamesPlatform.Instance.IncrementAchievement("CgkIqIqqjZYFEAIQEQ", 1, (bool success) =>
-                    {
-                    });
+                    // PlayGamesPlatform.Instance.IncrementAchievement("CgkIqIqqjZYFEAIQEQ", 1, (bool success) =>
+                    // {
+                    // });
                     break;
 
                 case ShowResult.Skipped:

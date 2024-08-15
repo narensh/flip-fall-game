@@ -111,7 +111,7 @@ namespace FlipFall.Cam
             while (true)
             {
                 originalPos = cams[0].transform.position;
-                velocity = rb.velocity;
+                velocity = rb.linearVelocity;
                 velocity.x = System.Math.Abs(velocity.x);
 
                 if (velocity.x > (maxVelocity - Constants.velocityThreshhold))

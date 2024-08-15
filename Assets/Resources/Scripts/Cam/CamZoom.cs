@@ -223,7 +223,7 @@ namespace FlipFall.Cam
             while (t < 1F)
             {
                 t += Time.deltaTime * (Time.timeScale / duration);
-                velocity = rb.velocity;
+                velocity = rb.linearVelocity;
                 //velocity.x = System.Math.Abs(velocity.x);
 
                 size = Mathf.Lerp(minZoom, maxZoom, Mathf.InverseLerp(minZoom, maxVelocity, velocity.magnitude));
@@ -248,7 +248,7 @@ namespace FlipFall.Cam
 
             while (true)
             {
-                velocity = rb.velocity;
+                velocity = rb.linearVelocity;
                 velocity.x = System.Math.Abs(velocity.x);
 
                 if (velocity.x > (maxVelocity - Constants.velocityThreshhold))

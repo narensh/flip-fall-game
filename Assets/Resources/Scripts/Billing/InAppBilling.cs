@@ -13,6 +13,7 @@ using UnityEngine.Purchasing;
 // Deriving the Purchaser class from IStoreListener enables it to receive messages from Unity Purchasing.
 public class InAppBilling : MonoBehaviour, IStoreListener
 {
+
     public static InAppBilling _instance;
 
     public static ProBuyEvent onProBuy = new ProBuyEvent();
@@ -28,6 +29,18 @@ public class InAppBilling : MonoBehaviour, IStoreListener
     private static string kItem = "pro_upgrade"; // General handle for the consumable product.
 
     private static string kGooglePlayItem = "flipfall.pro"; // Google Play Store identifier for the consumable product.
+
+    public void OnInitializeFailed(InitializationFailureReason error, string? message = null)
+    {
+        var errorMessage = $"Purchasing failed to initialize. Reason: {error}.";
+
+        if (message != null)
+        {
+            errorMessage += $" More details: {message}";
+        }
+
+        Debug.Log(errorMessage);
+    }
 
     private void Start()
     {

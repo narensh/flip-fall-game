@@ -92,7 +92,7 @@ namespace FlipFall.LevelObjects
                 {
                     // save the velocity on entering the portal
                     Rigidbody2D playerBody = Player._instance.rBody;
-                    teleportVelocityMemory = playerBody.velocity;
+                    teleportVelocityMemory = playerBody.linearVelocity;
 
                     // set exitportal
                     exitPortal = linkedPortal;
